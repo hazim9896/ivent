@@ -14,7 +14,12 @@ Steps to contribute:
 2. Remember to push when you've done any changes to your copy.
 
 Member List:
+
 1142702426 - Arif
+
 1142702491 - Shuk
+
 1142702495 - Hamizan
+
 1142700963 - Zul
+
