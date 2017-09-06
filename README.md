@@ -11,7 +11,9 @@ Steps to dload:
 
 Steps to contribute:
 1. Click at the Top Left "Fork" button to make a copy of this repo under your name
-2. Remember to push when you've done any changes to your copy.
+2. Remember to pull request when you've done any changes to your copy
+
+Learn more about pull request at: https://www.atlassian.com/git/tutorials/making-a-pull-request#example
 
 Member List:
 
