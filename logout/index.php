@@ -9,5 +9,5 @@
 	
 	session_destroy();
 	
-	Util::alert('You are logged out', 'http://localhost/');
+	Util::alert('You are logged out! Bye bye :D', 'http://localhost/');
 ?>

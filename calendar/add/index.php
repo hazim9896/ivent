@@ -4,26 +4,17 @@
 	
 		<meta charset="utf-8">
 		<title>Add Event</title>
-		<style type="text/css">
-			
-			header, footer {
-				padding: 1em;
-				color: white;
-				background-color: green;
-				clear: left;
-				text-align: center;
-			}
-			.center {
-				text-align: center;
-			}
-			p {
-				font-size: 0.875em;
-				font-weight: bold;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="../../style.css">
 	</head>
 	
 	<body>
+	<div>
+		<a href="http://localhost/calendar/">My Calendar</a>
+	</div>
+	<div>
+		<a href="http://localhost/logout/">Logout</a>
+	</div>
+	<br>
 		<?php
 			session_start();
 			

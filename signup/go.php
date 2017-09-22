@@ -10,21 +10,21 @@
 			<?php
 			require_once('../conn.php');
 			require_once('../db.php');
+			require_once('../util.php');
 
-
+			// if the method is POST
 			if ($_POST){
 				$username = $_POST['uid'];
 				$password = $_POST['pwd'];
 	
 				if(Db::hasUser($mysqli, $username)){
-					die ('This username has been taken!');
+					Util::alert('This username has been taken!', 'http://localhost/signup');
 				} else {
 					if (Db::insertUser($mysqli, $username, $password)){
-						//echo 'Successfully signed up!';
-						header("Location: http://localhost/calendar");
-						exit();
+						
+						Util::alert('Successfully signed up! Please log in.',"http://localhost/login");
 					} else {
-						echo 'Failed to signed up.';
+						Util::alert('Failed to signed up!', 'http://localhost/signup');
 					}
 				}
 			}

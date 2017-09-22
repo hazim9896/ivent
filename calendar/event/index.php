@@ -2,6 +2,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>View Event</title>
+		<link rel="stylesheet" type="text/css" href="../../style.css">
 	</head>
 	<body>
 	<div>
@@ -10,6 +11,8 @@
 	<div>
 		<a href="http://localhost/logout/">Logout</a>
 	</div>
+	<br>
+	<div class="center">
 <?php
 	require_once('../../conn.php');
 	require_once('../../db.php');
@@ -34,18 +37,18 @@
 			Util::alert('This event does not exist! Returning to your calendar.', 'http://localhost/calendar/');
 		}
 	
-		echo '<h1>' . $event['title'] . '</h1>';
-		echo '<h2>' . $event['info'] . '</h2>';
+		echo '<header>' . $event['title'] . '</header>';
+		echo '<p>' . $event['info'] . '<br>';
 	
 		if ($event['member'] == $username){
-			echo '<h3>This event was created by you.</h3>';
+			echo '<br>This event was created by <strong>you.</strong><br>';
 		} else {
-			echo '<h3>This event was created by ' . $event['member'] . '</h3>';
+			echo '<br>This event was created by <strong>' . $event['member'] . '</strong><br>';
 		}
 	
-		echo '<h4>' . $event['date'] . '</h4><hr>';
+		echo '<br><strong>Time: </strong>' . $event['date'] . '<hr>';
 	
-		echo '<h5>Event link: http://localhost/calendar/event/?id=' . $event['id'] . '</h5><hr>';
+		echo '<br><strong>Event link:</strong> http://localhost/calendar/event/?id=' . $event['id'] . '</p><hr>';
 		
 		if (Db::notAttending($mysqli, $event['id'], $username)){
 			echo '<h2>Will you be attending this event?</h2>
@@ -60,7 +63,7 @@
   	  	if (empty($attendance)){
   	  		echo '<h4>No one is attending this event yet. Share the event link to collect attendees.</h4>';
   	  	} else {
-  	  		echo '<h4>Who will be attend:</h4>
+  	  		echo '<h4>Who will be attending this event:</h4>
   				  <ol>';
   	  		foreach($attendance as $attend){
   	  			echo '<li>' . $attend['member'] . '</li>';
@@ -70,5 +73,6 @@
   	  	}
 	}
 ?>
+</div>
 </body>
 </html>
