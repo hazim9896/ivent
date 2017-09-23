@@ -11,7 +11,7 @@
 			require_once('util.php');
 			
 			// check if the user has logged in
-			if ($_SESSION['username'] != null){
+			if (!empty($_SESSION['username'])){
 				Util::redirect('http://localhost/calendar');
 			}
 		?>
@@ -23,7 +23,7 @@
 				<a href="http://localhost/signup/">Sign Up</a>
 			</div>
 			<div>
-				<a href="http://localhost/about">About Us</a>
+				<a href="http://localhost/about/">About Us</a>
 			</div>
 		</div>
 		<hr/>

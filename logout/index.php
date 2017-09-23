@@ -1,11 +1,13 @@
-
 <?php
 	// LOGOUT
 	require_once('../util.php');
 	
 	session_start();
 	
-	$_SESSION['username'] = null;
+	// check if user logged in
+	if (!empty($_SESSION['username']))
+		// clear the session's username
+		$_SESSION['username'] = null;
 	
 	session_destroy();
 	

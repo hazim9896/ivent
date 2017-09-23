@@ -12,9 +12,10 @@
 			Util::alert('You are not logged in!', 'http://localhost/login');
 		}
 		
-		$event = $_POST['id'];
+		// event's id
+		$id = $_POST['id'];
 		
-		if (Db::insertAttendance($mysqli, $username, $event)){
+		if (Db::insertAttendance($mysqli, $username, $id)){
 			Util::alert('Event added to your calendar.', 'http://localhost/calendar/event/?id=' . $id);
 		} else {
 			Util::alert('Failed to add event to your calendar.', 'http://localhost/calendar/event/?id=' . $id);

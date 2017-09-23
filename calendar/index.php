@@ -17,11 +17,13 @@
 		require_once('../db.php');	
 		require_once('../util.php');
 		
-		$username = $_SESSION['username'];
-		
-		if ($username == null){
+		// redirect the user to login page if user is not logged in
+		if (empty($_SESSION['username'])){
 			Util::alert('You are not logged in.', 'http://localhost/login');
 		}
+		
+		// get the session's username
+		$username = $_SESSION['username'];
 		
 		echo '<header>' . $username . '\'s calendar</header>
 		<br>
@@ -32,6 +34,7 @@
 		<div>';
 		
 		try{
+			// get future events of this user
 			$events = Db::getEvents($mysqli, $username);
 			
 			if (empty($events)){

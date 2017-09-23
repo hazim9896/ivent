@@ -16,12 +16,14 @@
 	</div>
 	<br>
 		<?php
+			// to use the $_SESSION array
 			session_start();
 			
 			require_once('../../util.php');
 			
-			if ($_SESSION['username'] == null){
-				Util::alert('You are not logged in!', 'http://localhost/login/');
+			// redirect the user to login page if user is not logged in
+			if (empty($_SESSION['username'])){
+				Util::alert('You are not logged in.', 'http://localhost/login/');
 			}
 		?>
 		<header>Add an Event</header>
