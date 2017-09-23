@@ -7,7 +7,7 @@
 	<body>
 		<?php
 			session_start();
-			
+			require_once('conn.php');
 			require_once('util.php');
 			
 			// check if the user has logged in

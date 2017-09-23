@@ -41,7 +41,7 @@
 				}
 			} else {
 				// if the user does not exist in database
-				Util::alert('No such user exist. Maybe you want to sign up?', 'http://localhost/login/');
+				Util::alert('No such user exist. Maybe you want to sign up?', 'http://localhost/signup/');
 			}
 		}
 		?>

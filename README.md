@@ -1,27 +1,32 @@
 # ivent
 
-an Event Management Software named "Ivent"
-by Team Chill
+an Event Management Software named *Ivent*
+by Team *Chill*
 
-HTML5, CSS3, JS, PHP, MySQL
+Tech: HTML5, CSS3, JS, PHP, MySQL
 
-Steps to dload:
-1. Click at the Top Left GREEN "Clone or Download" button
-2. Choose your preffered way of downloading this repo
+---
+!!!IMPORTANT!!!
 
-Steps to contribute:
-1. Click at the Top Left "Fork" button to make a copy of this repo under your name
-2. Remember to pull request when you've done any changes to your copy
+1) Go to `./conn.php`
 
-Learn more about pull request at: https://www.atlassian.com/git/tutorials/making-a-pull-request#example
+2) Use `root` as the username
 
-Member List:
+3) Use you `root`'s password as the password
 
-1142702426 - Arif
+4) Open your browser and go to `http://localhost/`, so that it can create the necessary database for this site to work.
 
-1142702491 - Shuk
+5) Preffered browser: Edge or Chrome
 
-1142702495 - Hamizan
+---
 
-1142700963 - Zul
+Team *CHILL* Member List:
+
+1142702426 - Arif Danial
+
+1142702491 - Shukri Armizi
+
+1142702495 - Hamizan Adli
+
+1142700963 - Muhd Zulhazim
 
